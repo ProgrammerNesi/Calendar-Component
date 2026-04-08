@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+
+/* ── Design tokens ── */
+:root {
+  --accent:             #1a73c8;
+  --accent-dark:        #0d4f91;
+  --range-bg:           #ddeeff;
+  --range-preview-bg:   #eef6ff;
+  --range-border:       #b3d4f7;
+  --hover-bg:           #f0f4f8;
+
+  --text-primary:       #1a1a2e;
+  --text-secondary:     #4a4a6a;
+  --text-muted:         #9090aa;
+
+  --surface:            #f7f8fc;
+  --surface-card:       #ffffff;
+  --border-color:       #e4e6f0;
+
+  --spiral-bg:          #f0f1f5;
+  --spiral-ring:        #b0b4c8;
+  --spiral-hole:        #dde0ea;
+
+  --danger:             #e05555;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent:             #4d9de0;
+    --accent-dark:        #aad4f5;
+    --range-bg:           #1a2e45;
+    --range-preview-bg:   #141f2e;
+    --range-border:       #1e3d5c;
+    --hover-bg:           #1e2030;
+
+    --text-primary:       #e8e8f0;
+    --text-secondary:     #a0a0c0;
+    --text-muted:         #606080;
+
+    --surface:            #1a1b26;
+    --surface-card:       #13141e;
+    --border-color:       #2a2b3d;
+
+    --spiral-bg:          #1a1b26;
+    --spiral-ring:        #3a3b55;
+    --spiral-hole:        #0e0f18;
+  }
+}
+
+/* ── Monthly Themes ── */
+
+/* January: Fresh Start - Blue theme */
+[data-month="0"] {
+  --accent:             #007bff;
+  --accent-dark:        #0056b3;
+  --range-bg:           #cce7ff;
+  --range-preview-bg:   #e6f3ff;
+  --range-border:       #99d6ff;
+  --hover-bg:           #f0f8ff;
+
+  --surface:            #f0f8ff;
+  --surface-card:       #ffffff;
+  --border-color:       #cce7ff;
+}
+
+/* February: Love - Pink/Red theme */
+[data-month="1"] {
+  --accent:             #e91e63;
+  --accent-dark:        #c2185b;
+  --range-bg:           #fce4ec;
+  --range-preview-bg:   #fceff2;
+  --range-border:       #f8bbd9;
+  --hover-bg:           #fdf2f5;
+
+  --surface:            #fdf2f5;
+  --surface-card:       #ffffff;
+  --border-color:       #fce4ec;
+}
+
+/* March: Spring - Green theme */
+[data-month="2"] {
+  --accent:             #4caf50;
+  --accent-dark:        #388e3c;
+  --range-bg:           #e8f5e8;
+  --range-preview-bg:   #f1f8e9;
+  --range-border:       #c8e6c9;
+  --hover-bg:           #f5f9f5;
+
+  --surface:            #f5f9f5;
+  --surface-card:       #ffffff;
+  --border-color:       #e8f5e8;
+}
+
+/* April: Rain - Blue theme */
+[data-month="3"] {
+  --accent:             #2196f3;
+  --accent-dark:        #1976d2;
+  --range-bg:           #e3f2fd;
+  --range-preview-bg:   #f3f9ff;
+  --range-border:       #bbdefb;
+  --hover-bg:           #f7fbff;
+
+  --surface:            #f7fbff;
+  --surface-card:       #ffffff;
+  --border-color:       #e3f2fd;
+}
+
+/* May: Flowers - Pink theme */
+[data-month="4"] {
+  --accent:             #e91e63;
+  --accent-dark:        #c2185b;
+  --range-bg:           #fce4ec;
+  --range-preview-bg:   #fceff2;
+  --range-border:       #f8bbd9;
+  --hover-bg:           #fdf2f5;
+
+  --surface:            #fdf2f5;
+  --surface-card:       #ffffff;
+  --border-color:       #fce4ec;
+}
+
+/* June: Summer - Yellow theme */
+[data-month="5"] {
+  --accent:             #ff9800;
+  --accent-dark:        #f57c00;
+  --range-bg:           #fff3e0;
+  --range-preview-bg:   #fff8e1;
+  --range-border:       #ffcc02;
+  --hover-bg:           #fffdf7;
+
+  --surface:            #fffdf7;
+  --surface-card:       #ffffff;
+  --border-color:       #fff3e0;
+}
+
+/* July: Freedom - Blue theme */
+[data-month="6"] {
+  --accent:             #1a73c8;
+  --accent-dark:        #0d4f91;
+  --range-bg:           #ddeeff;
+  --range-preview-bg:   #eef6ff;
+  --range-border:       #b3d4f7;
+  --hover-bg:           #f0f4f8;
+
+  --surface:            #f0f4f8;
+  --surface-card:       #ffffff;
+  --border-color:       #e4e6f0;
+}
+
+/* August: School - Orange theme */
+[data-month="7"] {
+  --accent:             #ff5722;
+  --accent-dark:        #d84315;
+  --range-bg:           #ffebee;
+  --range-preview-bg:   #fff3f0;
+  --range-border:       #ffcdd2;
+  --hover-bg:           #fff8f6;
+
+  --surface:            #fff8f6;
+  --surface-card:       #ffffff;
+  --border-color:       #ffebee;
+}
+
+/* September: Autumn - Orange theme */
+[data-month="8"] {
+  --accent:             #ff9800;
+  --accent-dark:        #f57c00;
+  --range-bg:           #fff3e0;
+  --range-preview-bg:   #fff8e1;
+  --range-border:       #ffcc02;
+  --hover-bg:           #fffdf7;
+
+  --surface:            #fffdf7;
+  --surface-card:       #ffffff;
+  --border-color:       #fff3e0;
+}
+
+/* October: Halloween - Purple theme */
+[data-month="9"] {
+  --accent:             #9c27b0;
+  --accent-dark:        #7b1fa2;
+  --range-bg:           #f3e5f5;
+  --range-preview-bg:   #f8f0fa;
+  --range-border:       #ce93d8;
+  --hover-bg:           #faf6fb;
+
+  --surface:            #faf6fb;
+  --surface-card:       #ffffff;
+  --border-color:       #f3e5f5;
+}
+
+/* November: Thanksgiving - Brown theme */
+[data-month="10"] {
+  --accent:             #795548;
+  --accent-dark:        #5d4037;
+  --range-bg:           #efebe9;
+  --range-preview-bg:   #f5f3f0;
+  --range-border:       #d7ccc8;
+  --hover-bg:           #fbf9f7;
+
+  --surface:            #fbf9f7;
+  --surface-card:       #ffffff;
+  --border-color:       #efebe9;
+}
+
+/* December: Christmas - Red/Green theme */
+[data-month="11"] {
+  --accent:             #d32f2f;
+  --accent-dark:        #b71c1c;
+  --range-bg:           #ffebee;
+  --range-preview-bg:   #fff3f0;
+  --range-border:       #ffcdd2;
+  --hover-bg:           #fff8f6;
+
+  --surface:            #fff8f6;
+  --surface-card:       #ffffff;
+  --border-color:       #ffebee;
+}
+
+/* ── Dark Mode Monthly Themes ── */
+
+@media (prefers-color-scheme: dark) {
+  /* January: Fresh Start - Dark Blue theme */
+  [data-month="0"] {
+    --accent:             #4d9de0;
+    --accent-dark:        #aad4f5;
+    --range-bg:           #1a2e45;
+    --range-preview-bg:   #141f2e;
+    --range-border:       #1e3d5c;
+    --hover-bg:           #1e2030;
+
+    --surface:            #1a1b26;
+    --surface-card:       #13141e;
+    --border-color:       #2a2b3d;
+  }
+
+  /* February: Love - Dark Pink/Red theme */
+  [data-month="1"] {
+    --accent:             #f06292;
+    --accent-dark:        #f8bbd9;
+    --range-bg:           #3e2723;
+    --range-preview-bg:   #4e342e;
+    --range-border:       #5d4037;
+    --hover-bg:           #2e1b1e;
+
+    --surface:            #2e1b1e;
+    --surface-card:       #1a1a1a;
+    --border-color:       #3e2723;
+  }
+
+  /* March: Spring - Dark Green theme */
+  [data-month="2"] {
+    --accent:             #81c784;
+    --accent-dark:        #c8e6c9;
+    --range-bg:           #1b5e20;
+    --range-preview-bg:   #2e7d32;
+    --range-border:       #4caf50;
+    --hover-bg:           #0d4d0d;
+
+    --surface:            #0d4d0d;
+    --surface-card:       #1a1a1a;
+    --border-color:       #1b5e20;
+  }
+
+  /* April: Rain - Dark Blue theme */
+  [data-month="3"] {
+    --accent:             #64b5f6;
+    --accent-dark:        #bbdefb;
+    --range-bg:           #0d47a1;
+    --range-preview-bg:   #1565c0;
+    --range-border:       #1976d2;
+    --hover-bg:           #0a2a4a;
+
+    --surface:            #0a2a4a;
+    --surface-card:       #1a1a1a;
+    --border-color:       #0d47a1;
+  }
+
+  /* May: Flowers - Dark Pink theme */
+  [data-month="4"] {
+    --accent:             #f06292;
+    --accent-dark:        #f8bbd9;
+    --range-bg:           #3e2723;
+    --range-preview-bg:   #4e342e;
+    --range-border:       #5d4037;
+    --hover-bg:           #2e1b1e;
+
+    --surface:            #2e1b1e;
+    --surface-card:       #1a1a1a;
+    --border-color:       #3e2723;
+  }
+
+  /* June: Summer - Dark Yellow theme */
+  [data-month="5"] {
+    --accent:             #ffb74d;
+    --accent-dark:        #ffcc02;
+    --range-bg:           #f57f17;
+    --range-preview-bg:   #ff8f00;
+    --range-border:       #ff9800;
+    --hover-bg:           #4a2c00;
+
+    --surface:            #4a2c00;
+    --surface-card:       #1a1a1a;
+    --border-color:       #f57f17;
+  }
+
+  /* July: Freedom - Dark Blue theme */
+  [data-month="6"] {
+    --accent:             #4d9de0;
+    --accent-dark:        #aad4f5;
+    --range-bg:           #1a2e45;
+    --range-preview-bg:   #141f2e;
+    --range-border:       #1e3d5c;
+    --hover-bg:           #1e2030;
+
+    --surface:            #1a1b26;
+    --surface-card:       #13141e;
+    --border-color:       #2a2b3d;
+  }
+
+  /* August: School - Dark Orange theme */
+  [data-month="7"] {
+    --accent:             #ff8a65;
+    --accent-dark:        #ffab91;
+    --range-bg:           #bf360c;
+    --range-preview-bg:   #d84315;
+    --range-border:       #e64a19;
+    --hover-bg:           #4a0c00;
+
+    --surface:            #4a0c00;
+    --surface-card:       #1a1a1a;
+    --border-color:       #bf360c;
+  }
+
+  /* September: Autumn - Dark Orange theme */
+  [data-month="8"] {
+    --accent:             #ffb74d;
+    --accent-dark:        #ffcc02;
+    --range-bg:           #f57f17;
+    --range-preview-bg:   #ff8f00;
+    --range-border:       #ff9800;
+    --hover-bg:           #4a2c00;
+
+    --surface:            #4a2c00;
+    --surface-card:       #1a1a1a;
+    --border-color:       #f57f17;
+  }
+
+  /* October: Halloween - Dark Purple theme */
+  [data-month="9"] {
+    --accent:             #ba68c8;
+    --accent-dark:        #ce93d8;
+    --range-bg:           #4a148c;
+    --range-preview-bg:   #6a1b9a;
+    --range-border:       #7b1fa2;
+    --hover-bg:           #2a0a3d;
+
+    --surface:            #2a0a3d;
+    --surface-card:       #1a1a1a;
+    --border-color:       #4a148c;
+  }
+
+  /* November: Thanksgiving - Dark Brown theme */
+  [data-month="10"] {
+    --accent:             #a1887f;
+    --accent-dark:        #d7ccc8;
+    --range-bg:           #3e2723;
+    --range-preview-bg:   #4e342e;
+    --range-border:       #5d4037;
+    --hover-bg:           #2e1b1e;
+
+    --surface:            #2e1b1e;
+    --surface-card:       #1a1a1a;
+    --border-color:       #3e2723;
+  }
+
+  /* December: Christmas - Dark Red/Green theme */
+  [data-month="11"] {
+    --accent:             #ef5350;
+    --accent-dark:        #ffcdd2;
+    --range-bg:           #b71c1c;
+    --range-preview-bg:   #c62828;
+    --range-border:       #d32f2f;
+    --hover-bg:           #4a0c0c;
+
+    --surface:            #4a0c0c;
+    --surface-card:       #1a1a1a;
+    --border-color:       #b71c1c;
+  }
+}
+
+/* ── Reset ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--surface);
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ── App wrapper ── */
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 16px 80px;
+}

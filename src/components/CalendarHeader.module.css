@@ -1,0 +1,136 @@
+.header {
+  position: relative;
+}
+
+.hero {
+  position: relative;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .hero {
+    height: 240px;
+  }
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0.1) 40%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+/* Diagonal cut badge — bottom right */
+.badge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 24px 12px 36px;
+  clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.1;
+}
+
+.year {
+  font-size: 11px;
+  letter-spacing: 2px;
+  opacity: 0.85;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.month {
+  font-size: 26px;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+}
+
+/* Nav buttons — top left of hero */
+.nav {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  display: flex;
+  gap: 6px;
+}
+
+.navBtn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+  line-height: 1;
+}
+
+.navBtn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Image controls — top right of hero */
+.imageControls {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  display: flex;
+  gap: 8px;
+}
+
+.uploadBtn,
+.resetBtn {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.15s ease;
+  white-space: nowrap;
+}
+
+.uploadBtn:hover,
+.resetBtn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.resetBtn {
+  background: rgba(255, 0, 0, 0.3);
+}
+
+.resetBtn:hover {
+  background: rgba(255, 0, 0, 0.5);
+}
+
+/* Custom image overlay when using uploaded image */
+.customImage {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  pointer-events: none;
+}

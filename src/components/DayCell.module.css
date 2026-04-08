@@ -1,0 +1,82 @@
+.cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s ease;
+}
+
+.empty {
+  height: 36px;
+}
+
+.number {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-primary);
+  transition: background 0.1s ease, color 0.1s ease;
+}
+
+.cell:hover .number {
+  background: var(--hover-bg);
+}
+
+.weekend .number {
+  color: var(--accent);
+}
+
+.today .number {
+  border: 1.5px solid var(--accent);
+  font-weight: 600;
+}
+
+/* Range highlight band */
+.inRange {
+  background: var(--range-bg);
+}
+
+.inRange .number {
+  background: transparent;
+  color: var(--accent-dark);
+  border-radius: 0;
+}
+
+.preview {
+  background: var(--range-preview-bg);
+}
+
+/* Start cap */
+.start {
+  background: linear-gradient(to right, transparent 50%, var(--range-bg) 50%);
+}
+
+.start .number {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* End cap */
+.end {
+  background: linear-gradient(to left, transparent 50%, var(--range-bg) 50%);
+}
+
+.end .number {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* When start and end are same day — no band needed */
+.start.end {
+  background: transparent;
+}
