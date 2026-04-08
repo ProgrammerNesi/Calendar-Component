@@ -12,29 +12,29 @@ I wanted to create something that goes beyond a basic calendar app. Instead of s
 
 **CSS Modules**: Scoped styling prevents conflicts and keeps components self-contained. The dynamic theming system uses CSS custom properties that update in real-time based on image analysis.
 
-**Canvas API**: For extracting dominant colors from background images, creating a truly adaptive theme system. This was a fun challenge to implement and results in that "wow" moment when colors shift as you navigate months.
+**Canvas API**: For extracting dominant colors from background images, creating a truly adaptive theme system. This was a fun challenge to implement and results in nice themes when colors shift as you navigate months.
 
 **LocalStorage**: Simple, reliable persistence for notes without needing a backend. Keeps the app self-contained and fast.
 
 ## Features
 
-### 🎨 Smart Theming
+### Smart Theming
 - Analyzes each month's hero image to generate complementary color palettes
 - **Upload custom images** to instantly see theme adaptation
 - Instant theme switching as you browse months
 - Automatic dark mode adaptation
 
-### ❄️ Seasonal Atmosphere
+### Seasonal Atmosphere
 - Winter snowflakes, spring petals, summer sparkles, autumn leaves
 - Subtle animations that don't distract from functionality
 - Pure CSS for smooth performance
 
-### 📝 Note Taking
+### Note Taking
 - Click and drag to select date ranges
 - Notes persist across sessions
 - Clean, readable interface that works in any theme
 
-### 📱 Responsive Design
+### Responsive Design
 - Works beautifully on desktop and mobile
 - Touch-friendly interactions
 - Consistent layout across devices
