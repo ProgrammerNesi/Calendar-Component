@@ -24,11 +24,6 @@ I wanted to create something that goes beyond a basic calendar app. Instead of s
 - Instant theme switching as you browse months
 - Automatic dark mode adaptation
 
-### Seasonal Atmosphere
-- Winter snowflakes, spring petals, summer sparkles, autumn leaves
-- Subtle animations that don't distract from functionality
-- Pure CSS for smooth performance
-
 ### Note Taking
 - Click and drag to select date ranges
 - Notes persist across sessions
