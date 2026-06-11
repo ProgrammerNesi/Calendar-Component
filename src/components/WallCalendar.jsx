@@ -78,7 +78,7 @@ function WallCalendar() {
             />
           </div>
         </div>
-
+        <div>Hello there</div>
         {/* Right panel: notes */}
         <div className={styles.right}>
           <NotesPanel
