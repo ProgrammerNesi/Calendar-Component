@@ -40,12 +40,7 @@ export function isSameDay(a, b) {
     a.getDate() === b.getDate()
   )
 }
-export function isSameMonth(a, b) {
-  if (!a || !b) return false
-  return (
-    a.getFullYear() === b.getFullYear()
-  )
-}
+
 
 export function isInRange(date, start, end) {
   if (!date || !start || !end) return false
