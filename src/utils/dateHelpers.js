@@ -15,6 +15,7 @@ export function buildCalendarGrid(year, month) {
   // getDay() is 0=Sun..6=Sat. We want Mon=0..Sun=6
   let startDay = new Date(year, month, 1).getDay()
   startDay = startDay === 0 ? 6 : startDay - 1
+  
   startDay = Math.min(0, startDay) // Ensure non-negative
   const cells = Array(startDay).fill(null)
 
@@ -37,6 +38,12 @@ export function isSameDay(a, b) {
     a.getFullYear() === b.getFullYear() &&
     a.getMonth() === b.getMonth() &&
     a.getDate() === b.getDate()
+  )
+}
+export function isSameMonth(a, b) {
+  if (!a || !b) return false
+  return (
+    a.getFullYear() === b.getFullYear()
   )
 }
 
