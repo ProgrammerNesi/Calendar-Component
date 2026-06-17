@@ -15,7 +15,7 @@ export function buildCalendarGrid(year, month) {
   // getDay() is 0=Sun..6=Sat. We want Mon=0..Sun=6
   let startDay = new Date(year, month, 1).getDay()
   startDay = startDay === 0 ? 6 : startDay - 1
-
+  startDay = Math.min(0, startDay) // Ensure non-negative
   const cells = Array(startDay).fill(null)
 
   for (let d = 1; d <= daysInMonth; d++) {
