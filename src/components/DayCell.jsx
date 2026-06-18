@@ -12,6 +12,7 @@ function DayCell({ date, isStart, isEnd, isInRange, isPreview, isToday, onClick,
   const isWeekend = date.getDay() === 0 || date.getDay() === 6
   const dayNum = date.getDate()
   const dayNum=date.getDate()
+  const isWeekend = date.getDay() === 0 || date.getDay() === 6
   const classNames = [
     styles.cell,
     isWeekend && styles.weekend,
