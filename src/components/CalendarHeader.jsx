@@ -7,6 +7,7 @@ function CalendarHeader({ year, month, onPrev, onNext, onImageUpload, onResetThe
   const fileInputRef = useRef(null)
   const image = MONTH_IMAGES[month]
   const image = MONTH_IMAGES[month]
+  const image = MONTH_IMAGES[month]
   const handleFileSelect = (event) => {
     const file = event.target.files[0]
     if (file) {
