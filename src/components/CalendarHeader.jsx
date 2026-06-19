@@ -6,7 +6,7 @@ import styles from './CalendarHeader.module.css'
 function CalendarHeader({ year, month, onPrev, onNext, onImageUpload, onResetTheme, customImageUrl, hasCustomImage }) {
   const fileInputRef = useRef(null)
   const image = MONTH_IMAGES[month]
-
+  const image = MONTH_IMAGES[month]
   const handleFileSelect = (event) => {
     const file = event.target.files[0]
     if (file) {
